@@ -1,15 +1,359 @@
 {
-    "atomType": "Molecule",
-    "name": "Towel Holder 1",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "60620507-e6c9-49d8-982d-00ca3da7cb69",
-    "ioValues": [],
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "compiledBom": {},
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "name": "Towel Holder 1",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "60620507-e6c9-49d8-982d-00ca3da7cb69",
+  "ioValues": [
+    {
+      "name": "Ring Size",
+      "ioValue": 12,
+      "currentEquation": "12"
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "name": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "e282516e-a5f8-4182-9a46-a84b6ef13e7d",
+      "ioValues": []
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "name": "torus",
+      "x": 0.4290942360475755,
+      "y": 0.3136645962732919,
+      "uniqueID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
+      "ioValues": [
+        {
+          "name": "minor radius",
+          "ioValue": 3,
+          "currentEquation": "3"
+        },
+        {
+          "name": "major radius",
+          "ioValue": 6,
+          "currentEquation": "2"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "c5d0adf8-5f6a-478c-9047-36e18f45e81f",
+          "ioValues": []
+        },
+        {
+          "atomType": "Code",
+          "name": "Code",
+          "x": 0.6102470265324794,
+          "y": 0.48136645962732916,
+          "uniqueID": "d53aca49-03c0-497c-9dcd-57ef83ad87f6",
+          "ioValues": [
+            {
+              "name": "majorRadius",
+              "ioValue": 6
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"circleShape\", type: \"geometry\", defaultValue: null},\n      {inputName: \"majorRadius\", type: \"number\", defaultValue: 10},\n      ]\n\n       let createdRectangle = library[circleShape]\n      const newPlane = new replicad.Plane().pivot(0, 'Y')\n    //Use the built-in Move function to move the shape in the X direction\n      let movedShape = await Move(createdRectangle, majorRadius, 0, 0)\n\n       const torus =  movedShape.geometry[0].sketchOnPlane(\"XZ\").revolve();\n \n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [torus],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      return shape2"
+        },
+        {
+          "atomType": "Circle",
+          "name": "Circle",
+          "x": 0.1582799634034767,
+          "y": 0.3012422360248447,
+          "uniqueID": "18789a37-0fcf-47f5-8aa3-2a113a7ecd86",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 3
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "name": "Rotate",
+          "x": 0.29917657822506866,
+          "y": 0.3726708074534162,
+          "uniqueID": "d77991d8-b4d7-4157-9046-597e41636d1d",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 90
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "name": "Move",
+          "x": 0.4263494967978042,
+          "y": 0.3074534161490683,
+          "uniqueID": "cde42769-fadb-4feb-b550-868bd72e6377",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 15
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "name": "minor radius",
+          "x": 0.033,
+          "y": 0.5093167701863354,
+          "uniqueID": "07a6845f-0298-4254-8f37-ed3da447a35b",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "name": "major radius",
+          "x": 0.033,
+          "y": 0.7391304347826086,
+          "uniqueID": "83cafc34-8701-4c44-84fa-438d4dd440e8",
+          "ioValues": [],
+          "type": "number"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "output",
+          "ap2Name": "number or geometry",
+          "ap1ID": "d53aca49-03c0-497c-9dcd-57ef83ad87f6",
+          "ap2ID": "c5d0adf8-5f6a-478c-9047-36e18f45e81f"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "18789a37-0fcf-47f5-8aa3-2a113a7ecd86",
+          "ap2ID": "d77991d8-b4d7-4157-9046-597e41636d1d"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "d77991d8-b4d7-4157-9046-597e41636d1d",
+          "ap2ID": "cde42769-fadb-4feb-b550-868bd72e6377"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "circleShape",
+          "ap1ID": "cde42769-fadb-4feb-b550-868bd72e6377",
+          "ap2ID": "d53aca49-03c0-497c-9dcd-57ef83ad87f6"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "diameter",
+          "ap1ID": "07a6845f-0298-4254-8f37-ed3da447a35b",
+          "ap2ID": "18789a37-0fcf-47f5-8aa3-2a113a7ecd86"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "majorRadius",
+          "ap1ID": "83cafc34-8701-4c44-84fa-438d4dd440e8",
+          "ap2ID": "d53aca49-03c0-497c-9dcd-57ef83ad87f6"
+        }
+      ],
+      "parentRepo": {
+        "privateRepo": false,
+        "repoName": "torus",
+        "dateCreated": "2025-10-06T19:53:02Z",
+        "readMe": "https://raw.githubusercontent.com/alzatin/torus/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "2ec8d6d5-6791-4e47-a95c-7d7a479afe28",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/torus",
+        "topics": [
+          "basic shape",
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739530",
+        "ranking": 0,
+        "searchField": "torus alzatin torus  basic shape abundance-tool",
+        "owner": "alzatin",
+        "description": "TORUS ",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/torus/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/torus/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1,
+      "compiledBom": []
+    },
+    {
+      "atomType": "Molecule",
+      "name": "Wall plate",
+      "x": 0.2689844464775846,
+      "y": 0.6614906832298136,
+      "uniqueID": "f7b3cf10-f3ef-4232-a9b3-e54e8678f882",
+      "ioValues": [
+        {
+          "name": "Ring Size",
+          "ioValue": 12
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "3c8a09f0-cde2-4c40-86a2-6bac2df5b6b4",
+          "ioValues": []
+        },
+        {
+          "atomType": "Input",
+          "name": "Ring Size",
+          "x": 0.033,
+          "y": 0.6583850931677019,
+          "uniqueID": "2fabe29f-ab63-4e86-9f91-267b46769169",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Circle",
+          "name": "Circle",
+          "x": 0.2397072278133577,
+          "y": 0.3136645962732919,
+          "uniqueID": "01d28bcf-185b-4fd2-b257-51d4aac42582",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 4,
+              "currentEquation": "4"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "name": "Extrude",
+          "x": 0.4263494967978042,
+          "y": 0.32608695652173914,
+          "uniqueID": "8afabcdb-da6d-473c-a1cc-610315685943",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 1,
+              "currentEquation": "1"
+            }
+          ]
+        },
+        {
+          "atomType": "Circle",
+          "name": "Circle",
+          "x": 0.3037511436413541,
+          "y": 0.5434782608695652,
+          "uniqueID": "58cb0fef-5c24-44a7-935f-14b5395ead74",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 1.7,
+              "currentEquation": "1.7"
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "name": "Extrude",
+          "x": 0.45105215004574567,
+          "y": 0.5341614906832298,
+          "uniqueID": "f5b8db51-2843-4327-be2b-f743ad8799c4",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "01d28bcf-185b-4fd2-b257-51d4aac42582",
+          "ap2ID": "8afabcdb-da6d-473c-a1cc-610315685943"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "58cb0fef-5c24-44a7-935f-14b5395ead74",
+          "ap2ID": "f5b8db51-2843-4327-be2b-f743ad8799c4"
+        }
+      ],
+      "fileTypeVersion": 1,
+      "compiledBom": {}
+    },
+    {
+      "atomType": "Input",
+      "name": "Ring Size",
+      "x": 0.033,
+      "y": 0.4316770186335404,
+      "uniqueID": "19246796-72a5-4d4d-8818-1702b8fda639",
+      "ioValues": [],
+      "type": "number"
+    },
+    {
+      "atomType": "Equation",
+      "name": "Equation",
+      "x": 0.2140896614821592,
+      "y": 0.2919254658385093,
+      "uniqueID": "f3b75f9b-ba4f-4d04-b061-ba67af8d4144",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 12
+        }
+      ],
+      "currentEquation": "x /2"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap1Name": "number or geometry",
+      "ap2Name": "x",
+      "ap1ID": "19246796-72a5-4d4d-8818-1702b8fda639",
+      "ap2ID": "f3b75f9b-ba4f-4d04-b061-ba67af8d4144"
+    },
+    {
+      "ap1Name": "number or geometry",
+      "ap2Name": "Ring Size",
+      "ap1ID": "19246796-72a5-4d4d-8818-1702b8fda639",
+      "ap2ID": "f7b3cf10-f3ef-4232-a9b3-e54e8678f882"
+    },
+    {
+      "ap1Name": "result",
+      "ap2Name": "major radius",
+      "ap1ID": "f3b75f9b-ba4f-4d04-b061-ba67af8d4144",
+      "ap2ID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "compiledBom": {},
+  "filetypeVersion": 1
 }
