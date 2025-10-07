@@ -46,39 +46,10 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.7242718446601941,
-      "y": 0.5248447204968945,
+      "x": 0.7631067961165049,
+      "y": 0.5838509316770186,
       "uniqueID": "f5a38275-10a0-4b3c-b124-88b52d890c67",
       "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": {
-            "geometry": "move-ee2a073c9ddfd8125f7314b086d3dccc7d4860f19d577a871304e7f6706930d8",
-            "dimension": "3D",
-            "tags": [
-              "createdShape"
-            ],
-            "color": "#A3CE5B",
-            "plane": {
-              "origin": [
-                0,
-                0,
-                0
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "bom": []
-          }
-        },
         {
           "name": "Shape 2",
           "ioValue": {
@@ -236,6 +207,63 @@
             "color": "#aad7f2",
             "bom": [],
             "dimension": "3D"
+          }
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": "move-d0d22825f8aaebd041c02b6ee6bd0a32a056f77d405d9e245ac8f4332ae77d0a",
+                "dimension": "3D",
+                "tags": [
+                  "createdShape",
+                  "keepout"
+                ],
+                "color": "#D9544D",
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "bom": []
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#A3CE5B",
+            "tags": [
+              "createdShape",
+              "keepout"
+            ],
+            "bom": []
           }
         }
       ]
@@ -1477,8 +1505,8 @@
     {
       "atomType": "Move",
       "name": "Move",
-      "x": 0.574757281553398,
-      "y": 0.3695652173913043,
+      "x": 0.6,
+      "y": 0.4440993788819876,
       "uniqueID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea",
       "ioValues": [
         {
@@ -1496,6 +1524,155 @@
           "currentEquation": "20"
         }
       ]
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "name": "Scale",
+      "x": 0.470873786407767,
+      "y": 0.5279503105590062,
+      "uniqueID": "11c7475c-666c-4388-9624-bc00263bd490",
+      "ioValues": [
+        {
+          "name": "Scale Factor",
+          "ioValue": 1.01,
+          "currentEquation": "1.01"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "ed0b4b8b-950d-4dc8-bf3f-f8dd1eec9e22",
+          "ioValues": []
+        },
+        {
+          "atomType": "Input",
+          "name": "Geometry",
+          "x": 0.025384615384615384,
+          "y": 0.4692737430167598,
+          "uniqueID": "421dd775-382f-40ea-9412-29b11a7046ac",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Input",
+          "name": "Scale Factor",
+          "x": 0.025384615384615384,
+          "y": 0.6508379888268156,
+          "uniqueID": "e2cb9232-22d8-46ab-a4ab-ca05fd4fa8a5",
+          "ioValues": [],
+          "type": "number"
+        },
+        {
+          "atomType": "Code",
+          "name": "Code",
+          "x": 0.4226190476190476,
+          "y": 0.25139664804469275,
+          "uniqueID": "4c624eb2-b86d-40d0-b060-8e09aab461cd",
+          "ioValues": [
+            {
+              "name": "scaleFactor",
+              "ioValue": 1.01
+            }
+          ],
+          "codeVersion": 1,
+          "code": " \n      //Inputs:[inputShape, scaleFactor]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n\n      let scaledShape = await Scale(inputShape, scaleFactor);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [scaledShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      return shape1\n      \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "inputShape",
+          "ap1ID": "421dd775-382f-40ea-9412-29b11a7046ac",
+          "ap2ID": "4c624eb2-b86d-40d0-b060-8e09aab461cd"
+        },
+        {
+          "ap1Name": "number or geometry",
+          "ap2Name": "scaleFactor",
+          "ap1ID": "e2cb9232-22d8-46ab-a4ab-ca05fd4fa8a5",
+          "ap2ID": "4c624eb2-b86d-40d0-b060-8e09aab461cd"
+        },
+        {
+          "ap1Name": "output",
+          "ap2Name": "number or geometry",
+          "ap1ID": "4c624eb2-b86d-40d0-b060-8e09aab461cd",
+          "ap2ID": "ed0b4b8b-950d-4dc8-bf3f-f8dd1eec9e22"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-10-06T15:47:14.832Z",
+        "privateRepo": false,
+        "repoName": "Scale",
+        "dateCreated": "2025-06-26T17:06:11Z",
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "4b6bc40a-44a9-438a-9ed9-ba4910815d8d",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Scale",
+        "topics": [],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739428",
+        "ranking": 0,
+        "searchField": "scale barboursmith scales the input 2d or 3d geometry by the scale factor ",
+        "owner": "BarbourSmith",
+        "description": "Scales the input 2D or 3D geometry by the scale factor",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1,
+      "compiledBom": []
+    },
+    {
+      "atomType": "Color",
+      "name": "Color",
+      "x": 0.6844660194174756,
+      "y": 0.37888198757763975,
+      "uniqueID": "56564778-9cd0-4bc1-827a-fc34c1674b31",
+      "ioValues": [],
+      "selectedColorIndex": 23
+    },
+    {
+      "atomType": "Assembly",
+      "name": "Assembly",
+      "x": 0.8495145631067962,
+      "y": 0.6645962732919254,
+      "uniqueID": "810386df-64ec-482b-a111-1b670febab8b",
+      "ioValues": []
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.5825242718446603,
+      "y": 0.2732919254658385,
+      "uniqueID": "775ab1ca-e762-4559-9beb-5f8a6f264979",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 65
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 20
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "name": "Difference",
+      "x": 0.7378640776699028,
+      "y": 0.7391304347826086,
+      "uniqueID": "4a45224f-0a7d-4e54-8ce5-cdd8e5d1d81a",
+      "ioValues": []
     }
   ],
   "allConnectors": [
@@ -1524,10 +1701,22 @@
       "ap2ID": "e282516e-a5f8-4182-9a46-a84b6ef13e7d"
     },
     {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry1",
+      "ap1ID": "f5a38275-10a0-4b3c-b124-88b52d890c67",
+      "ap2ID": "4a45224f-0a7d-4e54-8ce5-cdd8e5d1d81a"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "Geometry",
+      "ap1ID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
+      "ap2ID": "11c7475c-666c-4388-9624-bc00263bd490"
+    },
+    {
       "ap1Name": "geometry or number",
       "ap2Name": "geometry",
       "ap1ID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
-      "ap2ID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea"
+      "ap2ID": "775ab1ca-e762-4559-9beb-5f8a6f264979"
     },
     {
       "ap1Name": "geometry or number",
@@ -1537,8 +1726,20 @@
     },
     {
       "ap1Name": "geometry",
-      "ap2Name": "Shape 1",
+      "ap2Name": "geometry",
       "ap1ID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea",
+      "ap2ID": "56564778-9cd0-4bc1-827a-fc34c1674b31"
+    },
+    {
+      "ap1Name": "geometry or number",
+      "ap2Name": "geometry",
+      "ap1ID": "11c7475c-666c-4388-9624-bc00263bd490",
+      "ap2ID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea"
+    },
+    {
+      "ap1Name": "color",
+      "ap2Name": "Shape 3",
+      "ap1ID": "56564778-9cd0-4bc1-827a-fc34c1674b31",
       "ap2ID": "f5a38275-10a0-4b3c-b124-88b52d890c67"
     }
   ],
