@@ -46,14 +46,14 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.7126213592233009,
-      "y": 0.5341614906832298,
+      "x": 0.7242718446601941,
+      "y": 0.5248447204968945,
       "uniqueID": "f5a38275-10a0-4b3c-b124-88b52d890c67",
       "ioValues": [
         {
           "name": "Shape 1",
           "ioValue": {
-            "geometry": "singular-b8d52dc8aa20e6a056357c967c95447dd9feb6e3e818e98cb2b9183e8c918cc6",
+            "geometry": "move-ee2a073c9ddfd8125f7314b086d3dccc7d4860f19d577a871304e7f6706930d8",
             "dimension": "3D",
             "tags": [
               "createdShape"
@@ -243,8 +243,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "torus",
-      "x": 0.4629460201280878,
-      "y": 0.23291925465838512,
+      "x": 0.4106796116504854,
+      "y": 0.2577639751552795,
       "uniqueID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
       "ioValues": [
         {
@@ -1473,6 +1473,29 @@
           "source": "www.example.com"
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "name": "Move",
+      "x": 0.574757281553398,
+      "y": 0.3695652173913043,
+      "uniqueID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 65,
+          "currentEquation": "65"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 20,
+          "currentEquation": "20"
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -1495,20 +1518,39 @@
       "ap2ID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a"
     },
     {
+      "ap1Name": "geometry",
+      "ap2Name": "number or geometry",
+      "ap1ID": "f5a38275-10a0-4b3c-b124-88b52d890c67",
+      "ap2ID": "e282516e-a5f8-4182-9a46-a84b6ef13e7d"
+    },
+    {
       "ap1Name": "geometry or number",
-      "ap2Name": "Shape 1",
+      "ap2Name": "geometry",
       "ap1ID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
-      "ap2ID": "f5a38275-10a0-4b3c-b124-88b52d890c67"
+      "ap2ID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea"
     },
     {
       "ap1Name": "geometry or number",
       "ap2Name": "Shape 2",
       "ap1ID": "f7b3cf10-f3ef-4232-a9b3-e54e8678f882",
       "ap2ID": "f5a38275-10a0-4b3c-b124-88b52d890c67"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "Shape 1",
+      "ap1ID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea",
+      "ap2ID": "f5a38275-10a0-4b3c-b124-88b52d890c67"
     }
   ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
-  "compiledBom": {},
+  "compiledBom": [
+    {
+      "BOMitemName": "#6 Wood Screw",
+      "numberNeeded": 1,
+      "costUSD": 0.1,
+      "source": "www.example.com"
+    }
+  ],
   "filetypeVersion": 1
 }
