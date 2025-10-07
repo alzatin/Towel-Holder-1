@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "Ring Size",
-      "ioValue": 12
+      "ioValue": 100,
+      "currentEquation": "100"
     }
   ],
   "topLevel": true,
@@ -32,13 +33,13 @@
     {
       "atomType": "Equation",
       "name": "Equation",
-      "x": 0.2140896614821592,
-      "y": 0.2919254658385093,
+      "x": 0.21134492223238793,
+      "y": 0.3074534161490683,
       "uniqueID": "f3b75f9b-ba4f-4d04-b061-ba67af8d4144",
       "ioValues": [
         {
           "name": "x",
-          "ioValue": 12
+          "ioValue": 100
         }
       ],
       "currentEquation": "x /2"
@@ -46,17 +47,18 @@
     {
       "atomType": "GitHubMolecule",
       "name": "torus",
-      "x": 0.4903934126258006,
-      "y": 0.2888198757763975,
+      "x": 0.4629460201280878,
+      "y": 0.23291925465838512,
       "uniqueID": "4e0b3e47-08e4-41a1-9ceb-910ef8d7fb0a",
       "ioValues": [
         {
           "name": "minor radius",
-          "ioValue": 3
+          "ioValue": 10,
+          "currentEquation": "10"
         },
         {
           "name": "major radius",
-          "ioValue": 6
+          "ioValue": 50
         }
       ],
       "topLevel": false,
@@ -78,7 +80,7 @@
           "ioValues": [
             {
               "name": "majorRadius",
-              "ioValue": 6
+              "ioValue": 50
             }
           ],
           "codeVersion": 1,
@@ -93,7 +95,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 3
+              "ioValue": 10
             }
           ]
         },
@@ -233,7 +235,7 @@
       "ioValues": [
         {
           "name": "Ring Size",
-          "ioValue": 12
+          "ioValue": 100
         }
       ],
       "topLevel": false,
@@ -1046,14 +1048,14 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.67612076852699,
+      "x": 0.707227813357731,
       "y": 0.5403726708074534,
       "uniqueID": "f5a38275-10a0-4b3c-b124-88b52d890c67",
       "ioValues": [
         {
           "name": "Shape 1",
           "ioValue": {
-            "geometry": "singular-080a9ed428559ef602668b4c00f114f1a11c3f6b02a435f0bdc154578e4d7f22",
+            "geometry": "singular-41164c427f4cf681cc1b50eaf1a175e3574a1d015c6c90fbdaf77aea39d24086",
             "dimension": "3D",
             "tags": [
               "createdShape"
@@ -1081,7 +1083,138 @@
         },
         {
           "name": "Shape 2",
-          "ioValue": null
+          "ioValue": {
+            "geometry": [
+              {
+                "geometry": "cut-495cd1387bb69988bd6e51c3621346ab668de88dc36bf68029cf0bb8a136f173",
+                "tags": [],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "dimension": "3D"
+              },
+              {
+                "geometry": [
+                  {
+                    "geometry": "move-ee1feb7f70d9acf87f184d585ffbe43512a28843cde3bbf9bddc5553f74e1b3b",
+                    "dimension": "3D",
+                    "tags": [
+                      "keepout"
+                    ],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        -4
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#D9544D",
+                    "bom": [
+                      {
+                        "BOMitemName": "#6 Wood Screw",
+                        "numberNeeded": 1,
+                        "costUSD": 0.1,
+                        "source": "www.example.com"
+                      }
+                    ]
+                  },
+                  {
+                    "geometry": "move-4dac60134e94339c667e62baabc29de530d613fbeae2fa5dab1f5b3f6ed6f125",
+                    "dimension": "3D",
+                    "tags": [
+                      "keepout"
+                    ],
+                    "plane": {
+                      "origin": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "xDir": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "normal": [
+                        0,
+                        0,
+                        1
+                      ]
+                    },
+                    "color": "#D9544D",
+                    "bom": []
+                  }
+                ],
+                "tags": [],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2"
+              }
+            ],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "tags": [],
+            "color": "#aad7f2",
+            "bom": [],
+            "dimension": "3D"
+          }
         }
       ]
     }
