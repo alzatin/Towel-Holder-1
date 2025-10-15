@@ -23,8 +23,8 @@
     {
       "atomType": "Input",
       "name": "Ring Size",
-      "x": 0.033,
-      "y": 0.2,
+      "x": 0.031349999999999996,
+      "y": 0.19,
       "uniqueID": "19246796-72a5-4d4d-8818-1702b8fda639",
       "ioValues": [],
       "type": "number"
@@ -46,8 +46,8 @@
     {
       "atomType": "Move",
       "name": "Move",
-      "x": 0.48389261744966444,
-      "y": 0.5,
+      "x": 0.4850498338870432,
+      "y": 0.5062111801242236,
       "uniqueID": "90e9dc7b-cb4e-4ab4-8a59-69f8ef681aea",
       "ioValues": [
         {
@@ -67,8 +67,8 @@
     {
       "atomType": "Color",
       "name": "Color",
-      "x": 0.6,
-      "y": 0.6304347826086957,
+      "x": 0.5564784053156147,
+      "y": 0.6645962732919254,
       "uniqueID": "56564778-9cd0-4bc1-827a-fc34c1674b31",
       "ioValues": [],
       "selectedColorIndex": 23
@@ -76,8 +76,8 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.8234899328859061,
-      "y": 0.4503105590062112,
+      "x": 0.6827242524916943,
+      "y": 0.5341614906832298,
       "uniqueID": "810386df-64ec-482b-a111-1b670febab8b",
       "ioValues": [
         {
@@ -85,7 +85,7 @@
           "ioValue": {
             "geometry": [
               {
-                "geometry": "cut-015014601a886ba1d9a5dc5300c9ef928d3049c94a32c079954cdeb81ea8589d",
+                "geometry": "cut-c766b9d5ffff28dddb02b0833bc89961db4ec21db7df90bfb27bdceccea3d3f0",
                 "tags": [],
                 "bom": [],
                 "plane": {
@@ -109,7 +109,7 @@
                 "dimension": "3D"
               },
               {
-                "geometry": "cut-239f268d9605d89316c1d34d3c90e6a1ebb7749ae024965a80d3cd772ef60186",
+                "geometry": "cut-4aa5257ee5ca044066c86b714a9b9a4cdf96c43e3cd56179296c29446b3df9c1",
                 "tags": [],
                 "bom": [],
                 "plane": {
@@ -135,7 +135,7 @@
               {
                 "geometry": [
                   {
-                    "geometry": "move-aec8ab4dce7d0232968310717a85493f249a96fc407356a6f5182ee5edd424c4",
+                    "geometry": "move-00db617d7e63ac5372db85f25e4075d8668ecb7a520d79a6e3468a56ae359a9e",
                     "dimension": "3D",
                     "tags": [
                       "keepout"
@@ -168,7 +168,7 @@
                     ]
                   },
                   {
-                    "geometry": "move-b9e04560b1743605c22adeb979813d0ca7c5b5a6272fd2a8f8268b5948225951",
+                    "geometry": "move-a0f222b0aa5c3838930010fb256791993832cf052e72b8e55c2ac6685427ba14",
                     "dimension": "3D",
                     "tags": [
                       "keepout"
@@ -241,7 +241,7 @@
         {
           "name": "Shape 4",
           "ioValue": {
-            "geometry": "move-6a779e3a4e135003a52249ae4df27fe5f74b91198f7625fa64887d5f83213075",
+            "geometry": "move-fd0dda0268d7da3a40a6af90887defd840d2f00b1f9ff3f937c3fe3b579e5057",
             "dimension": "3D",
             "tags": [
               "createdShape"
@@ -293,10 +293,35 @@
     {
       "atomType": "Difference",
       "name": "Difference",
-      "x": 0.738255033557047,
-      "y": 0.6614906832298136,
+      "x": 0.6362126245847176,
+      "y": 0.8167701863354037,
       "uniqueID": "4a45224f-0a7d-4e54-8ce5-cdd8e5d1d81a",
       "ioValues": []
+    },
+    {
+      "atomType": "Export",
+      "name": "Export",
+      "x": 0.8704318936877076,
+      "y": 0.7950310559006211,
+      "uniqueID": "57857732-debd-4de6-b545-2b043be272d8",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Towel Holder 1"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Towel Holder 1"
     },
     {
       "atomType": "GitHubMolecule",
@@ -397,8 +422,8 @@
         {
           "atomType": "Input",
           "name": "minor radius",
-          "x": 0.033,
-          "y": 0.2,
+          "x": 0.031349999999999996,
+          "y": 0.19,
           "uniqueID": "07a6845f-0298-4254-8f37-ed3da447a35b",
           "ioValues": [],
           "type": "number"
@@ -406,8 +431,8 @@
         {
           "atomType": "Input",
           "name": "major radius",
-          "x": 0.033,
-          "y": 0.30000000000000004,
+          "x": 0.031349999999999996,
+          "y": 0.28500000000000003,
           "uniqueID": "83cafc34-8701-4c44-84fa-438d4dd440e8",
           "ioValues": [],
           "type": "number"
@@ -504,8 +529,8 @@
         {
           "atomType": "Input",
           "name": "Geometry",
-          "x": 0.033,
-          "y": 0.2,
+          "x": 0.031349999999999996,
+          "y": 0.19,
           "uniqueID": "421dd775-382f-40ea-9412-29b11a7046ac",
           "ioValues": [],
           "type": "number"
@@ -513,8 +538,8 @@
         {
           "atomType": "Input",
           "name": "Scale Factor",
-          "x": 0.033,
-          "y": 0.30000000000000004,
+          "x": 0.031349999999999996,
+          "y": 0.28500000000000003,
           "uniqueID": "e2cb9232-22d8-46ab-a4ab-ca05fd4fa8a5",
           "ioValues": [],
           "type": "number"
@@ -606,8 +631,8 @@
         {
           "atomType": "Input",
           "name": "Ring Size",
-          "x": 0.033,
-          "y": 0.2,
+          "x": 0.031349999999999996,
+          "y": 0.19,
           "uniqueID": "2fabe29f-ab63-4e86-9f91-267b46769169",
           "ioValues": [],
           "type": "number"
@@ -837,7 +862,7 @@
               "ioValue": {
                 "geometry": [
                   {
-                    "geometry": "move-aec8ab4dce7d0232968310717a85493f249a96fc407356a6f5182ee5edd424c4",
+                    "geometry": "move-00db617d7e63ac5372db85f25e4075d8668ecb7a520d79a6e3468a56ae359a9e",
                     "dimension": "3D",
                     "tags": [
                       "keepout"
@@ -870,7 +895,7 @@
                     ]
                   },
                   {
-                    "geometry": "move-b9e04560b1743605c22adeb979813d0ca7c5b5a6272fd2a8f8268b5948225951",
+                    "geometry": "move-a0f222b0aa5c3838930010fb256791993832cf052e72b8e55c2ac6685427ba14",
                     "dimension": "3D",
                     "tags": [
                       "keepout"
@@ -1306,7 +1331,7 @@
                 {
                   "name": "Shape 2",
                   "ioValue": {
-                    "geometry": "singular-d0bca111f8628137adc4c16f123496dcdd1d590d06cb5d9acd68b39fe656fb97",
+                    "geometry": "singular-54c2bbec2c3453a499843d00244b8aacd201055ee16d4934198fb51b4f5e2368",
                     "dimension": "3D",
                     "tags": [],
                     "plane": {
@@ -1624,29 +1649,54 @@
       ]
     },
     {
-      "atomType": "Export",
-      "name": "Export",
-      "x": 0.8597315436241612,
-      "y": 0.7919254658385093,
-      "uniqueID": "57857732-debd-4de6-b545-2b043be272d8",
+      "atomType": "CutLayout",
+      "name": "Cut Layout",
+      "x": 0.8264119601328903,
+      "y": 0.2919254658385093,
+      "uniqueID": "dba081b1-0dfa-4b19-a6ee-7ef549a23c46",
       "ioValues": [
         {
-          "name": "File Type",
-          "ioValue": "STL"
+          "name": "Sheet Width",
+          "ioValue": 2438
         },
         {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
+          "name": "Sheet Height",
+          "ioValue": 1219,
+          "currentEquation": "1219"
         },
         {
-          "name": "Part Name",
-          "ioValue": "Towel Holder 1"
+          "name": "Part Padding",
+          "ioValue": 10
         }
       ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "Towel Holder 1"
+      "placements": [
+        [
+          {
+            "id": 2,
+            "rotate": 150,
+            "translate": {
+              "x": 75.06409676594463,
+              "y": 75.06409676594463
+            }
+          },
+          {
+            "id": 0,
+            "rotate": 90,
+            "translate": {
+              "x": 20.2251606,
+              "y": 152.92374429999998
+            }
+          },
+          {
+            "id": 1,
+            "rotate": 270,
+            "translate": {
+              "x": 122.52424866594461,
+              "y": 154.94892808003723
+            }
+          }
+        ]
+      ]
     }
   ],
   "allConnectors": [
@@ -1691,6 +1741,12 @@
       "ap2Name": "geometry",
       "ap1ID": "810386df-64ec-482b-a111-1b670febab8b",
       "ap2ID": "57857732-debd-4de6-b545-2b043be272d8"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "810386df-64ec-482b-a111-1b670febab8b",
+      "ap2ID": "dba081b1-0dfa-4b19-a6ee-7ef549a23c46"
     },
     {
       "ap1Name": "geometry",
