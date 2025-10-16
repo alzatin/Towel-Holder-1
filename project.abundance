@@ -76,8 +76,8 @@
     {
       "atomType": "Assembly",
       "name": "Assembly",
-      "x": 0.6545275590551182,
-      "y": 0.4440993788819876,
+      "x": 0.6594488188976378,
+      "y": 0.4937888198757764,
       "uniqueID": "810386df-64ec-482b-a111-1b670febab8b",
       "ioValues": [
         {
@@ -85,7 +85,31 @@
           "ioValue": {
             "geometry": [
               {
-                "geometry": "cut-85cae94fec8b82cec067c306d191cf8621500670776cc12d8331ceac13f2e527",
+                "geometry": "cut-cd96d14a2aadefa9b671416f4753de853878eedaa6985827c7a8f8949e8f8d77",
+                "tags": [],
+                "bom": [],
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "dimension": "3D"
+              },
+              {
+                "geometry": "cut-a73f4a338f5dbb2c5cd69ddd84196818410c0aa0165b34b082d60c7e398af702",
                 "tags": [],
                 "bom": [],
                 "plane": {
@@ -111,115 +135,66 @@
               {
                 "geometry": [
                   {
-                    "geometry": "cut-d610cd49fff52a752125d9d434ac4fd4520d21568c94a8a95535c62728c35274",
-                    "tags": [],
-                    "color": "#aad7f2",
-                    "bom": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "dimension": "3D"
-                  },
-                  {
-                    "geometry": "cut-7b8eda8f5bfdf392713dd9b22d9d35b06498fc5b1f8ee3d8b0d244748b5f5dca",
-                    "tags": [],
-                    "color": "#aad7f2",
-                    "bom": [],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        0
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "dimension": "3D"
-                  }
-                ],
-                "plane": {
-                  "origin": [
-                    0,
-                    0,
-                    0
-                  ],
-                  "xDir": [
-                    1,
-                    0,
-                    0
-                  ],
-                  "normal": [
-                    0,
-                    0,
-                    1
-                  ]
-                },
-                "color": "#aad7f2",
-                "tags": [],
-                "bom": []
-              },
-              {
-                "geometry": [
-                  {
-                    "geometry": "move-aec8ab4dce7d0232968310717a85493f249a96fc407356a6f5182ee5edd424c4",
-                    "dimension": "3D",
-                    "tags": [
-                      "keepout"
-                    ],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        -4
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#D9544D",
-                    "bom": [
+                    "geometry": [
                       {
-                        "BOMitemName": "#6 Wood Screw",
-                        "numberNeeded": 1,
-                        "costUSD": 0.1,
-                        "source": "www.example.com"
+                        "geometry": "move-6daa3bb4782058b2d243231b2e85d885c1f096b32f513ea3b333340438abcb38",
+                        "dimension": "3D",
+                        "tags": [
+                          "keepout"
+                        ],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            -4
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#D9544D",
+                        "bom": [
+                          {
+                            "BOMitemName": "#6 Wood Screw",
+                            "numberNeeded": 1,
+                            "costUSD": 0.1,
+                            "source": "www.example.com"
+                          }
+                        ]
+                      },
+                      {
+                        "geometry": "move-00b27fe57aee7208d07a7fa0d03814f1bd3ce26be40fa26f7ea07cb329e38943",
+                        "dimension": "3D",
+                        "tags": [
+                          "keepout"
+                        ],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#D9544D",
+                        "bom": []
                       }
-                    ]
-                  },
-                  {
-                    "geometry": "move-b9e04560b1743605c22adeb979813d0ca7c5b5a6272fd2a8f8268b5948225951",
-                    "dimension": "3D",
-                    "tags": [
-                      "keepout"
                     ],
                     "plane": {
                       "origin": [
@@ -238,7 +213,8 @@
                         1
                       ]
                     },
-                    "color": "#D9544D",
+                    "color": "#aad7f2",
+                    "tags": [],
                     "bom": []
                   }
                 ],
@@ -341,16 +317,16 @@
     {
       "atomType": "Difference",
       "name": "Difference",
-      "x": 0.6377952755905512,
-      "y": 0.8385093167701863,
+      "x": 0.640748031496063,
+      "y": 0.8198757763975155,
       "uniqueID": "4a45224f-0a7d-4e54-8ce5-cdd8e5d1d81a",
       "ioValues": []
     },
     {
       "atomType": "Export",
       "name": "Export",
-      "x": 0.8704318936877076,
-      "y": 0.7950310559006211,
+      "x": 0.8700787401574804,
+      "y": 0.7981366459627329,
       "uniqueID": "57857732-debd-4de6-b545-2b043be272d8",
       "ioValues": [
         {
@@ -374,8 +350,8 @@
     {
       "atomType": "CutLayout",
       "name": "Cut Layout",
-      "x": 0.8041338582677164,
-      "y": 0.2888198757763975,
+      "x": 0.7952755905511811,
+      "y": 0.2577639751552795,
       "uniqueID": "dba081b1-0dfa-4b19-a6ee-7ef549a23c46",
       "ioValues": [
         {
@@ -604,8 +580,8 @@
     {
       "atomType": "GitHubMolecule",
       "name": "Scale",
-      "x": 0.3523489932885906,
-      "y": 0.5372670807453416,
+      "x": 0.3543307086614173,
+      "y": 0.5496894409937888,
       "uniqueID": "11c7475c-666c-4388-9624-bc00263bd490",
       "ioValues": [
         {
@@ -706,8 +682,8 @@
     {
       "atomType": "Molecule",
       "name": "Wall plate",
-      "x": 0.3494094488188976,
-      "y": 0.8478260869565217,
+      "x": 0.3484251968503937,
+      "y": 0.8540372670807453,
       "uniqueID": "f7b3cf10-f3ef-4232-a9b3-e54e8678f882",
       "ioValues": [
         {
@@ -854,8 +830,8 @@
         {
           "atomType": "Color",
           "name": "Color",
-          "x": 0.545288197621226,
-          "y": 0.8788819875776397,
+          "x": 0.7273622047244094,
+          "y": 0.8229813664596274,
           "uniqueID": "22f6e78e-4608-4d4f-a527-bd13ce217408",
           "ioValues": [],
           "selectedColorIndex": 23
@@ -898,7 +874,7 @@
           "atomType": "Assembly",
           "name": "Assembly",
           "x": 0.8651574803149606,
-          "y": 0.5031055900621119,
+          "y": 0.5062111801242236,
           "uniqueID": "015e1867-d434-4d1f-a6bc-da8ab03fd173",
           "ioValues": [
             {
@@ -931,7 +907,7 @@
             {
               "name": "Shape 4",
               "ioValue": {
-                "geometry": "fuse-5703bdd8f6ecf57bd4cc15f4e2bddac297e113cd80647ebcb4c4c6a0f205c90a",
+                "geometry": "fuse-0927eadc593240c0b0f1f7478f4489c776d4474a980249d060590f8682535d66",
                 "tags": [],
                 "bom": [],
                 "plane": {
@@ -960,43 +936,66 @@
               "ioValue": {
                 "geometry": [
                   {
-                    "geometry": "move-aec8ab4dce7d0232968310717a85493f249a96fc407356a6f5182ee5edd424c4",
-                    "dimension": "3D",
-                    "tags": [
-                      "keepout"
-                    ],
-                    "plane": {
-                      "origin": [
-                        0,
-                        0,
-                        -4
-                      ],
-                      "xDir": [
-                        1,
-                        0,
-                        0
-                      ],
-                      "normal": [
-                        0,
-                        0,
-                        1
-                      ]
-                    },
-                    "color": "#D9544D",
-                    "bom": [
+                    "geometry": [
                       {
-                        "BOMitemName": "#6 Wood Screw",
-                        "numberNeeded": 1,
-                        "costUSD": 0.1,
-                        "source": "www.example.com"
+                        "geometry": "move-6daa3bb4782058b2d243231b2e85d885c1f096b32f513ea3b333340438abcb38",
+                        "dimension": "3D",
+                        "tags": [
+                          "keepout"
+                        ],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            -4
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#D9544D",
+                        "bom": [
+                          {
+                            "BOMitemName": "#6 Wood Screw",
+                            "numberNeeded": 1,
+                            "costUSD": 0.1,
+                            "source": "www.example.com"
+                          }
+                        ]
+                      },
+                      {
+                        "geometry": "move-00b27fe57aee7208d07a7fa0d03814f1bd3ce26be40fa26f7ea07cb329e38943",
+                        "dimension": "3D",
+                        "tags": [
+                          "keepout"
+                        ],
+                        "plane": {
+                          "origin": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "xDir": [
+                            1,
+                            0,
+                            0
+                          ],
+                          "normal": [
+                            0,
+                            0,
+                            1
+                          ]
+                        },
+                        "color": "#D9544D",
+                        "bom": []
                       }
-                    ]
-                  },
-                  {
-                    "geometry": "move-b9e04560b1743605c22adeb979813d0ca7c5b5a6272fd2a8f8268b5948225951",
-                    "dimension": "3D",
-                    "tags": [
-                      "keepout"
                     ],
                     "plane": {
                       "origin": [
@@ -1015,7 +1014,8 @@
                         1
                       ]
                     },
-                    "color": "#D9544D",
+                    "color": "#aad7f2",
+                    "tags": [],
                     "bom": []
                   }
                 ],
@@ -1046,8 +1046,8 @@
         {
           "atomType": "Move",
           "name": "Move",
-          "x": 0.6614173228346457,
-          "y": 0.84472049689441,
+          "x": 0.8257874015748032,
+          "y": 0.7701863354037267,
           "uniqueID": "b53df52f-6baf-4bc6-b2d7-fd1beca5427b",
           "ioValues": [
             {
@@ -1178,8 +1178,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 15,
-              "currentEquation": "15"
+              "ioValue": 17,
+              "currentEquation": "17"
             }
           ]
         },
@@ -1187,7 +1187,7 @@
           "atomType": "Fusion",
           "name": "Fusion",
           "x": 0.6840551181102362,
-          "y": 0.5124223602484472,
+          "y": 0.515527950310559,
           "uniqueID": "23674a16-8086-4fe4-9323-3db6f286368b",
           "ioValues": [
             {
@@ -1220,7 +1220,7 @@
             {
               "name": "Shape 2",
               "ioValue": {
-                "geometry": "move-1774c63fe20f89cb8011099d54bc4ae379fe5a80bd1b0c53a8980747b6d423cb",
+                "geometry": "move-eddb5f551f9e1fb3c39f134b5ebdc52c03809a8bdaf49779a5685709f0d966ac",
                 "dimension": "3D",
                 "tags": [],
                 "plane": {
@@ -1250,7 +1250,7 @@
         {
           "atomType": "GitHubMolecule",
           "name": "-6-Wood-Screw",
-          "x": 0.4233009708737864,
+          "x": 0.421259842519685,
           "y": 0.9378881987577641,
           "uniqueID": "f4c3437a-caf6-436f-8dd4-a673ef47c233",
           "ioValues": [],
@@ -1616,6 +1616,116 @@
               "source": "www.example.com"
             }
           ]
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "name": "Scale",
+          "x": 0.5895669291338582,
+          "y": 0.84472049689441,
+          "uniqueID": "767c7158-212f-4a0a-9c04-fad628929fc2",
+          "ioValues": [
+            {
+              "name": "Scale Factor",
+              "ioValue": 1.1,
+              "currentEquation": "1.1"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "name": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "9886a1ea-1213-405b-9ccb-d331bc83c79c",
+              "ioValues": []
+            },
+            {
+              "atomType": "Input",
+              "name": "Geometry",
+              "x": 0.033,
+              "y": 0.2,
+              "uniqueID": "271e8ef2-1d6f-49be-88ea-69764b09a616",
+              "ioValues": [],
+              "type": "number"
+            },
+            {
+              "atomType": "Input",
+              "name": "Scale Factor",
+              "x": 0.033,
+              "y": 0.30000000000000004,
+              "uniqueID": "7d76836e-a103-43df-bb41-97f88de3e822",
+              "ioValues": [],
+              "type": "number"
+            },
+            {
+              "atomType": "Code",
+              "name": "Code",
+              "x": 0.4226190476190476,
+              "y": 0.25139664804469275,
+              "uniqueID": "4abbb6ae-7627-4eee-b929-775ce2b32739",
+              "ioValues": [
+                {
+                  "name": "scaleFactor",
+                  "ioValue": 1.1
+                }
+              ],
+              "codeVersion": 1,
+              "code": " \n      //Inputs:[inputShape, scaleFactor]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n\n      let scaledShape = await Scale(inputShape, scaleFactor);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [scaledShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      return shape1\n      \n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap1Name": "number or geometry",
+              "ap2Name": "inputShape",
+              "ap1ID": "271e8ef2-1d6f-49be-88ea-69764b09a616",
+              "ap2ID": "4abbb6ae-7627-4eee-b929-775ce2b32739"
+            },
+            {
+              "ap1Name": "number or geometry",
+              "ap2Name": "scaleFactor",
+              "ap1ID": "7d76836e-a103-43df-bb41-97f88de3e822",
+              "ap2ID": "4abbb6ae-7627-4eee-b929-775ce2b32739"
+            },
+            {
+              "ap1Name": "output",
+              "ap2Name": "number or geometry",
+              "ap1ID": "4abbb6ae-7627-4eee-b929-775ce2b32739",
+              "ap2ID": "9886a1ea-1213-405b-9ccb-d331bc83c79c"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2025-10-16T15:47:14.653Z",
+            "privateRepo": false,
+            "repoName": "Scale",
+            "dateCreated": "2025-06-26T17:06:11Z",
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": "4b6bc40a-44a9-438a-9ed9-ba4910815d8d",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/Scale",
+            "topics": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739428",
+            "ranking": 0,
+            "searchField": "scale barboursmith scales the input 2d or 3d geometry by the scale factor ",
+            "owner": "BarbourSmith",
+            "description": "Scales the input 2D or 3D geometry by the scale factor",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Scale/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "Unitless",
+          "fileTypeVersion": 1,
+          "compiledBom": [
+            {
+              "BOMitemName": "#6 Wood Screw",
+              "numberNeeded": 1,
+              "costUSD": 0.1,
+              "source": "www.example.com"
+            }
+          ]
         }
       ],
       "allConnectors": [
@@ -1735,8 +1845,14 @@
         },
         {
           "ap1Name": "geometry or number",
-          "ap2Name": "geometry",
+          "ap2Name": "Geometry",
           "ap1ID": "f4c3437a-caf6-436f-8dd4-a673ef47c233",
+          "ap2ID": "767c7158-212f-4a0a-9c04-fad628929fc2"
+        },
+        {
+          "ap1Name": "geometry or number",
+          "ap2Name": "geometry",
+          "ap1ID": "767c7158-212f-4a0a-9c04-fad628929fc2",
           "ap2ID": "22f6e78e-4608-4d4f-a527-bd13ce217408"
         }
       ],
@@ -1805,6 +1921,12 @@
       "ap2Name": "Shape 3",
       "ap1ID": "4a45224f-0a7d-4e54-8ce5-cdd8e5d1d81a",
       "ap2ID": "810386df-64ec-482b-a111-1b670febab8b"
+    },
+    {
+      "ap1Name": "geometry",
+      "ap2Name": "geometry",
+      "ap1ID": "dba081b1-0dfa-4b19-a6ee-7ef549a23c46",
+      "ap2ID": "57857732-debd-4de6-b545-2b043be272d8"
     },
     {
       "ap1Name": "geometry or number",
