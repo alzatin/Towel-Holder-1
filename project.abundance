@@ -85,7 +85,7 @@
           "ioValue": {
             "geometry": [
               {
-                "geometry": "cut-cd96d14a2aadefa9b671416f4753de853878eedaa6985827c7a8f8949e8f8d77",
+                "geometry": "cut-fcea5b591de6761b78b1f57897079798996816dcdf4474383bf3b1b9ca388c9d",
                 "tags": [],
                 "bom": [],
                 "plane": {
@@ -137,7 +137,7 @@
                   {
                     "geometry": [
                       {
-                        "geometry": "move-6daa3bb4782058b2d243231b2e85d885c1f096b32f513ea3b333340438abcb38",
+                        "geometry": "move-01cba0fbdd64207fb93e8508ce549e8624904bdd05d574b73f3c04377f17e108",
                         "dimension": "3D",
                         "tags": [
                           "keepout"
@@ -170,7 +170,7 @@
                         ]
                       },
                       {
-                        "geometry": "move-00b27fe57aee7208d07a7fa0d03814f1bd3ce26be40fa26f7ea07cb329e38943",
+                        "geometry": "move-e47221f2e8a1cf1b75322855b101b74b1fda7751d3b32b8f4655d9f737134fe6",
                         "dimension": "3D",
                         "tags": [
                           "keepout"
@@ -758,8 +758,7 @@
           "ioValues": [
             {
               "name": "height",
-              "ioValue": 20,
-              "currentEquation": "20"
+              "ioValue": 20
             }
           ]
         },
@@ -938,7 +937,7 @@
                   {
                     "geometry": [
                       {
-                        "geometry": "move-6daa3bb4782058b2d243231b2e85d885c1f096b32f513ea3b333340438abcb38",
+                        "geometry": "move-01cba0fbdd64207fb93e8508ce549e8624904bdd05d574b73f3c04377f17e108",
                         "dimension": "3D",
                         "tags": [
                           "keepout"
@@ -971,7 +970,7 @@
                         ]
                       },
                       {
-                        "geometry": "move-00b27fe57aee7208d07a7fa0d03814f1bd3ce26be40fa26f7ea07cb329e38943",
+                        "geometry": "move-e47221f2e8a1cf1b75322855b101b74b1fda7751d3b32b8f4655d9f737134fe6",
                         "dimension": "3D",
                         "tags": [
                           "keepout"
@@ -1107,8 +1106,7 @@
           "ioValues": [
             {
               "name": "height",
-              "ioValue": 15,
-              "currentEquation": "15"
+              "ioValue": 15
             }
           ]
         },
@@ -1129,8 +1127,7 @@
             },
             {
               "name": "zDist",
-              "ioValue": 20,
-              "currentEquation": "20"
+              "ioValue": 20
             }
           ]
         },
@@ -1156,8 +1153,7 @@
           "ioValues": [
             {
               "name": "height",
-              "ioValue": 3,
-              "currentEquation": "3"
+              "ioValue": 3
             }
           ]
         },
@@ -1178,8 +1174,7 @@
             },
             {
               "name": "zDist",
-              "ioValue": 17,
-              "currentEquation": "17"
+              "ioValue": 17
             }
           ]
         },
@@ -1626,8 +1621,7 @@
           "ioValues": [
             {
               "name": "Scale Factor",
-              "ioValue": 1.1,
-              "currentEquation": "1.1"
+              "ioValue": 1.1
             }
           ],
           "topLevel": false,
